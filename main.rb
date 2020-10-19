@@ -10,8 +10,14 @@ current_player = 1
 
 # game loop while both players are alive
 while (player1.is_alive? && player2.is_alive?) do
-  puts player1.lives
-  puts player2.lives
-  player1.lives -= 1
-  player2.lives -= 1
+  
+  # determine current player
+  player = (current_player == 1) ? player1 : player2
+  
+  # get question
+  question = Question.new
+  puts question.question
+
+  # temporary to prevent infinite loop
+  player1.lives = 0
 end
