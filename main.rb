@@ -18,7 +18,7 @@ while (player1.is_alive? && player2.is_alive?) do
   question = Question.new
   
   # add horizontal line to make turn outputs more readable
-  puts "-----New Turn---------"
+  puts "----"
   
   # ask current player question
   puts "#{player.name}: #{question.question}"
@@ -35,15 +35,22 @@ while (player1.is_alive? && player2.is_alive?) do
   end
 
    # add horizontal line to make turn outputs more readable
-   puts "-----Lives Remaining---"
+   puts "----Lives Remaining---"
 
   # display current lives count for players
   puts "#{player1.name} #{player1.lives}/3 lives and #{player2.name} #{player2.lives}/3 lives"
 
-
   # switch players
   current_player = (current_player + 1) % 2
 
+  
   # temporary to prevent infinite loop
   # player1.lives = 0
+end
+
+# declare winner
+if player1.lives == 0
+  puts "#{player2.name} is the winner!"
+else player2.lives == 0
+  puts "#{player1.name} is the winner!"
 end
