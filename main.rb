@@ -27,9 +27,18 @@ while (player1.is_alive? && player2.is_alive?) do
   if answer == question.answer
     puts 'Correct!'
   else
-    puts 'Incorrect'
+    puts 'Incorrect!'
     player.lives -= 1
   end
+
+   # add horizontal line to make turn outputs more readable
+   puts "-----Lives Remaining---"
+
+  # display current lives count for players
+  puts "#{player1.name} #{player1.lives}/3 lives and #{player2.name} #{player2.lives}/3 lives"
+
+  # add horizontal line to make turn outputs more readable
+  puts "-----Next Turn---------"
 
   # temporary to prevent infinite loop
   # player1.lives = 0
