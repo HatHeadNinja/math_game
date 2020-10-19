@@ -16,7 +16,9 @@ while (player1.is_alive? && player2.is_alive?) do
   
   # get question
   question = Question.new
-  puts question.question
+  
+  # ask current player question
+  puts "#{player.name}: #{question.question}"
 
   # temporary to prevent infinite loop
   player1.lives = 0
