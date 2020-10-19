@@ -23,6 +23,14 @@ while (player1.is_alive? && player2.is_alive?) do
   # get answer
   answer = gets.chomp.to_i
 
+  # check answer for correctness
+  if answer == question.answer
+    puts 'Correct!'
+  else
+    puts 'Incorrect'
+    player.lives -= 1
+  end
+
   # temporary to prevent infinite loop
-  player1.lives = 0
+  # player1.lives = 0
 end
