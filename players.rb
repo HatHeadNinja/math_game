@@ -6,7 +6,7 @@ class Player
     @name = name
   end
 
-  def is_alive
+  def is_alive?
     @lives > 0
   end
 end

@@ -5,7 +5,13 @@ require './players.rb'
 player1 = Player.new('Player 1')
 player2 = Player.new('Player 2')
 
-puts player1.name
-puts player1.lives
-puts player2.name
-puts player2.lives
+# set current player
+current_player = 1
+
+# game loop while both players are alive
+while (player1.is_alive? && player2.is_alive?) do
+  puts player1.lives
+  puts player2.lives
+  player1.lives -= 1
+  player2.lives -= 1
+end
