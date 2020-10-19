@@ -20,6 +20,9 @@ while (player1.is_alive? && player2.is_alive?) do
   # ask current player question
   puts "#{player.name}: #{question.question}"
 
+  # get answer
+  answer = gets.chomp.to_i
+
   # temporary to prevent infinite loop
   player1.lives = 0
 end
